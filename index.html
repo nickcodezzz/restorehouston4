@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restore Houston | Premier Floor & Stone Restoration Experts</title>
+  <meta name="description" content="Houston's #1 rated floor and stone restoration company. We restore marble, hardwood, tile, travertine, and more back to flawless. Free estimates. Licensed & insured.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.hidden { display: none !important; }
+
+/* ===== LAYOUT ===== */
+.container { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+.text-center { text-align: center; }
+.mt-12 { margin-top: 48px; }
+.gold { color: #c9a84c; }
+
+/* ===== ICONS ===== */
+.icon-xs { width: 16px; height: 16px; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 20px; height: 20px; }
+.icon-lg { width: 24px; height: 24px; }
+
+/* ===== BUTTONS ===== */
+.btn-gold {
+  display: inline-block;
+  background: #c9a84c;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-gold:hover { background: #b8923e; }
+.btn-sm { padding: 8px 20px; font-size: 12px; border-radius: 4px; }
+.btn-md { padding: 12px 24px; font-size: 14px; border-radius: 8px; }
+.btn-lg { padding: 16px 40px; font-size: 14px; border-radius: 4px; }
+.btn-block { display: block; width: 100%; text-align: center; }
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover { background: #fff; color: #1a1a1a; }
+
+/* ===== NAVBAR ===== */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-container {
+  max-width: 1152px; margin: 0 auto; padding: 0 16px;
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 4px; }
+.logo-gold { color: #c9a84c; font-weight: 900; font-size: 18px; letter-spacing: -0.02em; }
+.logo-white { color: #fff; font-weight: 300; font-size: 18px; letter-spacing: 0.15em; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { color: #d1d5db; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: #c9a84c; }
+.nav-cta { display: flex; align-items: center; gap: 20px; }
+.nav-phone { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 14px; font-weight: 600; transition: color 0.3s; }
+.nav-phone:hover { color: #c9a84c; }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; }
+.menu-toggle svg { width: 24px; height: 24px; }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column; gap: 16px;
+  background: #111; padding: 24px 16px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.mobile-menu a { color: #d1d5db; font-size: 14px; font-weight: 500; padding: 4px 0; transition: color 0.3s; }
+.mobile-menu a:hover { color: #c9a84c; }
+
+/* ===== HERO ===== */
+#hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+#heroSlideshow { position: absolute; inset: 0; overflow: hidden; }
+#heroSlideshow img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition: opacity 1.2s ease; }
+#heroSlideshow img.active { opacity: 1; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.65), rgba(0,0,0,0.8)); }
+.hero-content { position: relative; z-index: 10; max-width: 1152px; margin: 0 auto; padding: 128px 16px; text-align: center; }
+.hero-eyebrow { color: #c9a84c; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+.hero-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 24px; }
+.hero-subtitle { color: #d1d5db; font-size: clamp(1rem, 2vw, 1.25rem); max-width: 672px; margin: 0 auto 32px; }
+.hero-phone { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 40px; transition: color 0.3s; }
+.hero-phone:hover { color: #c9a84c; }
+.hero-buttons { display: flex; flex-direction: column; gap: 16px; align-items: center; margin-bottom: 56px; }
+.hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; font-size: 14px; }
+.badge { display: flex; align-items: center; gap: 8px; color: #d1d5db; }
+.hero-wave { position: absolute; bottom: 0; left: 0; right: 0; line-height: 0; }
+.hero-wave svg { width: 100%; height: auto; }
+
+/* ===== STATS ===== */
+#stats { background: #c9a84c; padding: 56px 16px; }
+#stats .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; text-align: center; max-width: 1024px; }
+.stat-value { color: #1a1a1a; font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 4px; }
+.stat-label { color: rgba(26,26,26,0.7); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ===== SECTION SHARED ===== */
+.section-eyebrow { color: #c9a84c; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; text-align: center; margin-bottom: 8px; }
+.section-title { font-size: clamp(1.875rem, 5vw, 3rem); font-weight: 900; color: #fff; text-align: center; margin-bottom: 16px; }
+.section-subtitle { color: #9ca3af; text-align: center; max-width: 576px; margin: 0 auto 64px; }
+.section-title-dark { font-size: clamp(1.875rem, 5vw, 2.5rem); font-weight: 700; color: #1a1a1a; text-align: center; margin-bottom: 16px; }
+.section-subtitle-dark { color: #6b7280; text-align: center; max-width: 576px; margin: 0 auto 56px; }
+
+/* ===== SERVICES ===== */
+#services { background: #1a1a1a; padding: 96px 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(1, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.service-card {
+  background: #111; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 32px;
+  transition: border-color 0.3s, background 0.3s; cursor: default;
+}
+.service-card:hover { border-color: rgba(201,168,76,0.5); background: rgba(17,17,17,0.8); }
+.service-icon { width: 48px; height: 48px; background: rgba(201,168,76,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s; }
+.service-card:hover .service-icon { background: rgba(201,168,76,0.2); }
+.service-card h3 { color: #fff; font-weight: 700; font-size: 18px; margin-bottom: 12px; }
+.service-card p { color: #9ca3af; font-size: 14px; line-height: 1.6; }
+.service-link { display: block; margin-top: 20px; color: #c9a84c; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0; transition: opacity 0.3s; }
+.service-card:hover .service-link { opacity: 1; }
+
+/* ===== BEFORE/AFTER ===== */
+.bg-light { background: #f5f4f0; padding: 80px 16px; }
+.bg-light2 { background: #f5f4f0; padding: 80px 16px; }
+.ba-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: #fff; }
+.ba-card-media { display: grid; grid-template-columns: 1fr 1fr; height: 192px; }
+.ba-card-media.ba-tall { height: 288px; }
+.ba-side { position: relative; overflow: hidden; cursor: zoom-in; }
+.ba-side img, .ba-side video { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 0.3s; }
+.ba-side:hover img, .ba-side:hover video { transform: scale(1.18); }
+.live-photo { position: relative; width: 100%; height: 100%; }
+.live-photo img, .live-photo video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.live-photo video { opacity: 0; transition: opacity 0.2s ease; pointer-events: none; }
+.live-photo.playing video { opacity: 1; }
+.live-photo.playing img { opacity: 0; }
+.live-badge { position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.55); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 4px 8px; border-radius: 20px; pointer-events: none; }
+.live-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #c9a84c; }
+.ba-label-before { position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.7); color: #fff; font-size: 12px; padding: 2px 8px; border-radius: 4px; }
+.ba-label-after { position: absolute; bottom: 8px; right: 8px; background: #c9a84c; color: #1a1a1a; font-size: 12px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+.ba-card-title { padding: 16px; }
+.ba-card-title p { font-size: 14px; font-weight: 600; color: #1a1a1a; }
+
+/* ===== OUR WORK ===== */
+#our-work { background: #111; padding: 80px 16px; }
+.ow-item { position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 1; cursor: pointer; }
+.ow-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.ow-item:hover img { transform: scale(1.05); }
+.ow-overlay { position: absolute; inset: 0; background: transparent; transition: background 0.3s; display: flex; align-items: flex-end; }
+.ow-item:hover .ow-overlay { background: rgba(0,0,0,0.5); }
+.ow-caption { color: #fff; font-size: 12px; font-weight: 500; padding: 8px 12px; opacity: 0; transition: opacity 0.3s; }
+.ow-item:hover .ow-caption { opacity: 1; }
+
+/* ===== OUR WORK: BEFORE/AFTER FLIP GALLERY ===== */
+.ow-flip-wrap { max-width: 640px; margin: 0 auto; background: #1a1a1a; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+.ow-flip-toggle { display: flex; }
+.ow-flip-toggle button { flex: 1; padding: 14px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; background: #111; color: rgba(255,255,255,0.5); border: none; cursor: pointer; transition: background 0.25s, color 0.25s; }
+.ow-flip-toggle button.active { background: #c9a84c; color: #1a1a1a; }
+.ow-flip-stage { position: relative; aspect-ratio: 4/3; background: #000; }
+.ow-flip-stage img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
+.ow-flip-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(0,0,0,0.55); border: none; color: #fff; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.ow-flip-arrow:hover { background: rgba(0,0,0,0.8); }
+.ow-flip-arrow.prev { left: 12px; }
+.ow-flip-arrow.next { right: 12px; }
+.ow-flip-count { position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 12px; padding: 3px 10px; border-radius: 20px; }
+.ow-flip-label { position: absolute; bottom: 12px; left: 12px; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; color: #1a1a1a; background: #c9a84c; }
+.ow-flip-label.is-before { background: rgba(0,0,0,0.7); color: #fff; }
+.ow-flip-title { padding: 18px 20px; }
+.ow-flip-title p { font-size: 15px; font-weight: 600; color: #fff; }
+.ow-flip-dots { display: flex; gap: 6px; justify-content: center; padding: 0 0 18px; }
+.ow-flip-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; transition: background 0.2s; }
+.ow-flip-dots span.active { background: #c9a84c; }
+
+/* ===== VIDEOS ===== */
+#videos { background: #1a1a1a; padding: 80px 16px; }
+.video-item { position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 16/9; cursor: pointer; }
+.video-item video { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: opacity 0.3s; }
+.video-item:hover video { opacity: 0.9; }
+.video-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.video-play-btn { background: #c9a84c; border-radius: 50%; padding: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.3s; }
+.video-item:hover .video-play-btn { transform: scale(1.1); }
+.video-play-btn svg { width: 24px; height: 24px; fill: #1a1a1a; color: #1a1a1a; margin-left: 2px; }
+.video-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 16px; }
+.video-caption p { color: #fff; font-size: 14px; font-weight: 500; }
+
+/* ===== TESTIMONIALS ===== */
+#reviews { background: #1a1a1a; padding: 96px 16px; }
+.google-badge { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 56px; }
+.stars-5 { display: flex; gap: 4px; }
+.stars-5::before { content: "★★★★★"; color: #c9a84c; font-size: 20px; letter-spacing: 2px; }
+.rating-text { color: #fff; font-weight: 700; font-size: 18px; }
+.rating-source { color: #9ca3af; font-size: 14px; }
+.testimonial-card { background: #111; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 28px; }
+.testimonial-stars { display: flex; gap: 4px; margin-bottom: 16px; }
+.testimonial-stars::before { content: "★★★★★"; color: #c9a84c; font-size: 16px; }
+.testimonial-text { color: #d1d5db; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+.testimonial-name { color: #fff; font-weight: 600; font-size: 14px; }
+.testimonial-neighborhood { color: #c9a84c; font-size: 12px; }
+
+/* ===== PROCESS ===== */
+#process { background: #111; padding: 96px 16px; }
+.process-card { position: relative; background: #1a1a1a; border-radius: 12px; padding: 32px; border: 1px solid rgba(255,255,255,0.05); }
+.process-num-bg { position: absolute; top: 16px; right: 24px; color: rgba(201,168,76,0.2); font-size: 48px; font-weight: 900; user-select: none; }
+.process-num { width: 40px; height: 40px; background: #c9a84c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1a1a1a; font-weight: 900; font-size: 14px; margin-bottom: 20px; }
+.process-card h3 { color: #fff; font-weight: 700; font-size: 18px; margin-bottom: 12px; }
+.process-card p { color: #9ca3af; font-size: 14px; line-height: 1.6; }
+
+/* ===== SPECIALIST ===== */
+#specialist { background: #1a1a1a; padding: 80px 16px; }
+.specialist-card { background: #111; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5); max-width: 384px; margin: 0 auto; text-align: center; }
+.specialist-banner { height: 144px; background: #000; overflow: hidden; position: relative; }
+.specialist-banner img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+.specialist-avatar { width: 112px; height: 112px; border-radius: 50%; border: 4px solid #111; object-fit: cover; margin: -56px auto 0; position: relative; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+.specialist-info { padding: 0 24px 32px; margin-top: 8px; }
+.specialist-info h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.specialist-role { color: #c9a84c; font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+.specialist-company { color: #9ca3af; font-size: 14px; margin-bottom: 24px; }
+
+/* ===== CONTACT ===== */
+#contact { background: #1a1a1a; padding: 96px 16px; }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; }
+.contact-info h3 { color: #fff; font-weight: 700; font-size: 20px; margin-bottom: 24px; }
+.contact-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.contact-icon-box { width: 48px; height: 48px; background: rgba(201,168,76,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.3s; }
+.contact-item:hover .contact-icon-box { background: rgba(201,168,76,0.2); }
+.contact-label { color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.contact-value { color: #fff; font-weight: 600; font-size: 18px; transition: color 0.3s; }
+.contact-item:hover .contact-value { color: #c9a84c; }
+.why-choose { background: #111; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 24px; margin-top: 32px; }
+.why-title { color: #c9a84c; font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+.why-choose ul li { color: #9ca3af; font-size: 14px; padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+.check { color: #c9a84c; }
+
+.contact-form-wrap { background: #111; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 32px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.form-group label { display: block; color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  padding: 12px 16px; color: #fff; font-size: 14px; font-family: inherit;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: #4b5563; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: rgba(201,168,76,0.5); }
+.form-group textarea { resize: none; }
+.form-success { text-align: center; padding: 48px 0; }
+.success-icon { width: 64px; height: 64px; background: rgba(201,168,76,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: #c9a84c; font-size: 24px; }
+.form-success h3 { color: #fff; font-weight: 700; font-size: 20px; margin-bottom: 8px; }
+.form-success p { color: #9ca3af; font-size: 14px; }
+
+/* ===== FOOTER ===== */
+#footer { background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.05); padding: 56px 16px; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+.footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.footer-logo .logo-gold { font-size: 20px; }
+.footer-logo .logo-white { font-size: 20px; }
+.footer-desc { color: #6b7280; font-size: 14px; line-height: 1.6; }
+.footer-heading { color: #fff; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: #6b7280; font-size: 14px; transition: color 0.3s; }
+.footer-links a:hover { color: #c9a84c; }
+.footer-bottom { max-width: 1152px; margin: 40px auto 0; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+.footer-bottom p { color: #4b5563; font-size: 12px; }
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+  position: fixed; bottom: 24px; right: 24px; z-index: 90;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.95);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+.lightbox-close { position: absolute; top: 16px; right: 16px; z-index: 10; background: rgba(255,255,255,0.2); border: none; color: #fff; font-size: 28px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+.lightbox-close:hover { background: #c9a84c; }
+.lightbox-content { max-width: 768px; width: 100%; }
+.lightbox-content img, .lightbox-content video { width: 100%; max-height: 80vh; object-fit: contain; border-radius: 8px; }
+.lightbox-content p { text-align: center; color: #d1d5db; margin-top: 12px; font-size: 14px; }
+.lightbox-hint { color: #6b7280; font-size: 12px; margin-top: 4px; }
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 640px) {
+  .hero-buttons { flex-direction: row; justify-content: center; }
+  .form-row-2 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 768px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+  .nav-links, .nav-cta { display: flex; }
+  .menu-toggle { display: none; }
+  .mobile-menu { display: none !important; }
+  #stats .container { grid-template-columns: repeat(4, 1fr); }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 767px) {
+  .nav-links, .nav-cta { display: none; }
+  .menu-toggle { display: block; }
+  .mobile-menu { display: flex; }
+  .mobile-menu.hidden { display: none; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-gold">RESTORE</span>
+        <span class="logo-white">HOUSTON</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#our-work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="sms:+18328122599" class="nav-phone">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (832) 812-2599
+        </a>
+        <a href="#contact" class="btn-gold btn-sm">Free Estimate</a>
+      </div>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="closeIcon" class="hidden" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="#services">Services</a>
+      <a href="#our-work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="sms:+18328122599" class="nav-phone">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (832) 812-2599
+      </a>
+      <a href="#contact" class="btn-gold btn-sm btn-block">Free Estimate</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div id="heroSlideshow"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Houston's #1 Rated Restoration Company</p>
+      <h1 class="hero-title reveal">Houston's Premier<br><span class="gold">Floor &amp; Stone</span><br>Restoration Experts</h1>
+      <p class="hero-subtitle reveal">We restore marble, hardwood, tile, travertine, and more — back to flawless.</p>
+      <a href="sms:+18328122599" class="hero-phone reveal">
+        <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (832) 812-2599
+      </a>
+      <div class="hero-buttons reveal">
+        <a href="#contact" class="btn-gold btn-lg">Get a Free Quote</a>
+        <a href="#our-work" class="btn-outline btn-lg">See Our Work</a>
+      </div>
+      <div class="hero-badges reveal">
+        <div class="badge"><svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</div>
+        <div class="badge"><svg class="icon-xs" viewBox="0 0 24 24" fill="#c9a84c" stroke="#c9a84c" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 5-Star Rated</div>
+        <div class="badge"><svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston Local</div>
+        <div class="badge"><svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> Free Estimates</div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z" fill="#1a1a1a"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stat reveal"><p class="stat-value">500+</p><p class="stat-label">Floors Restored</p></div>
+      <div class="stat reveal"><p class="stat-value">20+</p><p class="stat-label">Years Experience</p></div>
+      <div class="stat reveal"><p class="stat-value">100%</p><p class="stat-label">Satisfaction Guarantee</p></div>
+      <div class="stat reveal"><p class="stat-value">Same-Week</p><p class="stat-label">Availability</p></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <p class="section-eyebrow reveal">What We Do</p>
+      <h2 class="section-title reveal">Our Services</h2>
+      <p class="section-subtitle reveal">Expert restoration for every hard surface — residential and commercial.</p>
+      <div class="grid-3">
+        <a href="#before-after-1" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div>
+          <h3>Marble Restoration</h3>
+          <p>Eliminate scratches, etching, and dullness. We bring marble surfaces back to a high-gloss, mirror finish.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+        <a href="#videos" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3>Hardwood Refinishing</h3>
+          <p>Sand, stain, and seal hardwood floors to remove wear, scuffs, and discoloration — like new again.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+        <a href="#videos" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3>Tile &amp; Grout Cleaning</h3>
+          <p>Deep-clean and regrout tile surfaces, restoring color and eliminating years of built-up grime.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+        <a href="#before-after-1" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+          <h3>Travertine Polishing</h3>
+          <p>Fill voids, hone, and polish travertine to a smooth, luminous finish that lasts for years.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Stone Sealing</h3>
+          <p>Protect natural stone from stains and moisture with professional-grade sealing treatments.</p>
+          <span class="service-link">Learn More →</span>
+        </div>
+        <a href="#videos" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Concrete Coating</h3>
+          <p>Transform dull concrete floors with decorative coatings, epoxy, and polishing for a premium look.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+        <a href="#gallery-upholstery" class="service-card reveal" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
+          <div class="service-icon"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M3 12v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"/><path d="M3 12a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2"/><path d="M7 10V8a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v2"/></svg></div>
+          <h3>Upholstery Cleaning</h3>
+          <p>Lift crayon, ink, and everyday stains from sofas and cushions with a deep, fabric-safe clean.</p>
+          <span class="service-link">Learn More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BEFORE/AFTER 1 ===== -->
+  <section id="before-after-1" class="bg-light">
+    <div class="container">
+      <p class="section-eyebrow reveal">Real Transformations</p>
+      <h2 class="section-title-dark reveal">Real Transformations. Lasting Results.</h2>
+      <p class="section-subtitle-dark reveal">See how professional restoration brings worn stone surfaces back to a clean, polished, like-new appearance.</p>
+      <div class="grid-3" id="ba1Grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== BEFORE/AFTER 2 ===== -->
+  <section id="gallery" class="bg-light2">
+    <div class="container">
+      <p class="section-eyebrow reveal">Before &amp; After</p>
+      <h2 class="section-title-dark reveal">See the Difference We Make</h2>
+      <p class="section-subtitle-dark reveal">Real results from real Houston homes — every surface restored to its highest potential.</p>
+      <div class="grid-3" id="ba2Grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== BEFORE/AFTER 3: UPHOLSTERY ===== -->
+  <section id="gallery-upholstery" class="bg-light">
+    <div class="container">
+      <p class="section-eyebrow reveal">Upholstery Cleaning</p>
+      <h2 class="section-title-dark reveal">Stains Out. Fabric Restored.</h2>
+      <p class="section-subtitle-dark reveal">From crayon and marker to everyday spills, we deep-clean upholstery and get it looking like new.</p>
+      <div class="grid-3" id="ba3Grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== OUR WORK ===== -->
+  <section id="our-work">
+    <div class="container">
+      <p class="section-eyebrow reveal">Our Portfolio</p>
+      <h2 class="section-title reveal">A Preview of Our Work</h2>
+      <p class="section-subtitle reveal">Real results from real projects across Houston. Every surface restored to its highest potential.</p>
+      <div class="ow-flip-wrap reveal" id="ourWorkFlip"></div>
+      <div class="text-center mt-12">
+        <a href="#contact" class="btn-gold btn-lg">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOS ===== -->
+  <section id="videos">
+    <div class="container">
+      <p class="section-eyebrow reveal">Watch Us Work</p>
+      <h2 class="section-title reveal">Behind the Scenes</h2>
+      <p class="section-subtitle reveal">Get an inside look at our restoration process — professional craftsmanship from start to finish.</p>
+      <div class="grid-3" id="videoGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="reviews">
+    <div class="container">
+      <p class="section-eyebrow reveal">Customer Reviews</p>
+      <h2 class="section-title reveal">What Houston Says</h2>
+      <div class="google-badge reveal">
+        <div class="stars-5"></div>
+        <span class="rating-text">5.0</span>
+        <span class="rating-source">· Google Reviews</span>
+      </div>
+      <div class="grid-3" id="testimonialGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <p class="section-eyebrow reveal">How It Works</p>
+      <h2 class="section-title reveal">Our Simple Process</h2>
+      <p class="section-subtitle reveal">From first contact to flawless results — here's what to expect.</p>
+      <div class="grid-4">
+        <div class="process-card reveal"><span class="process-num-bg">01</span><div class="process-num">1</div><h3>Free Inspection</h3><p>We come to you, assess the surface condition, and identify the best restoration approach.</p></div>
+        <div class="process-card reveal"><span class="process-num-bg">02</span><div class="process-num">2</div><h3>Custom Quote</h3><p>Receive a transparent, detailed quote with no hidden fees — tailored to your project.</p></div>
+        <div class="process-card reveal"><span class="process-num-bg">03</span><div class="process-num">3</div><h3>Expert Restoration</h3><p>Our certified specialists use professional-grade equipment to restore your surfaces.</p></div>
+        <div class="process-card reveal"><span class="process-num-bg">04</span><div class="process-num">4</div><h3>Stunning Results</h3><p>You're left with floors and surfaces that look brand new — guaranteed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEET THE SPECIALIST ===== -->
+  <section id="specialist">
+    <div class="container">
+      <p class="section-eyebrow reveal">The Team</p>
+      <h2 class="section-title reveal">Meet Our Specialist</h2>
+      <p class="section-subtitle reveal">Dedicated professionals bringing expertise and precision to every surface restoration.</p>
+      <div class="specialist-card reveal">
+        <div class="specialist-banner">
+          <img src="https://firebasestorage.googleapis.com/v0/b/poplco.appspot.com/o/banners%2f42958590715-icon-1760024558873636103?alt=media" alt="Banner">
+        </div>
+        <img src="https://firebasestorage.googleapis.com/v0/b/poplco.appspot.com/o/photos%2f42958590715-icon-1778689233665881008.jpg?alt=media" alt="Ronald Castillo" class="specialist-avatar">
+        <div class="specialist-info">
+          <h3>Ronald Castillo</h3>
+          <p class="specialist-role">Hard Surface Specialist</p>
+          <p class="specialist-company">RESTORE LLC</p>
+          <a href="https://popl.co/card/vVz0JIZC/1/dash" target="_blank" rel="noopener noreferrer" class="btn-gold btn-block btn-md">View Digital Business Card</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-eyebrow reveal">Contact Us</p>
+      <h2 class="section-title reveal">Get Your Free Estimate Today</h2>
+      <p class="section-subtitle reveal">Fill out the form or call us directly — we respond fast.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Reach Us Directly</h3>
+          <a href="sms:+18328122599" class="contact-item">
+            <div class="contact-icon-box"><svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><p class="contact-label">Phone</p><p class="contact-value">(832) 812-2599</p></div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon-box"><svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><p class="contact-label">Email</p><p class="contact-value">info@restorehoustontx.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box"><svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p class="contact-label">Service Area</p><p class="contact-value">Greater Houston, TX</p></div>
+          </div>
+          <div class="why-choose">
+            <p class="why-title">Why Choose Us?</p>
+            <ul>
+              <li><span class="check">✓</span> Free in-home consultation</li>
+              <li><span class="check">✓</span> Same-week availability</li>
+              <li><span class="check">✓</span> Licensed &amp; fully insured</li>
+              <li><span class="check">✓</span> 100% satisfaction guarantee</li>
+              <li><span class="check">✓</span> Serving Houston for 20+ years</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <div id="formSuccess" class="form-success hidden">
+            <div class="success-icon">✓</div>
+            <h3>We'll Be In Touch!</h3>
+            <p>Thank you for reaching out. Expect a call within 24 hours.</p>
+          </div>
+          <!-- Web3Forms: replace YOUR_ACCESS_KEY_HERE with the key from https://web3forms.com -->
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="93761637-6d6b-437b-922c-bc1d3b489b9c">
+            <input type="hidden" name="subject" value="New Lead from Restore Houston Website">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" required placeholder="(832) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label>Service Type</label>
+              <select name="service" required>
+                <option value="">Select a service...</option>
+                <option>Marble Restoration</option>
+                <option>Hardwood Refinishing</option>
+                <option>Tile &amp; Grout Cleaning</option>
+                <option>Travertine Polishing</option>
+                <option>Stone Sealing</option>
+                <option>Concrete Coating</option>
+                <option>Upholstery Cleaning</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn-gold btn-lg btn-block">Send My Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-gold">RESTORE</span>
+            <span class="logo-white">HOUSTON</span>
+          </div>
+          <p class="footer-desc">Houston's premier floor and stone restoration specialists. Bringing surfaces back to life since 2005.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Services</p>
+          <ul class="footer-links">
+            <li><a href="#services">Marble Restoration</a></li>
+            <li><a href="#services">Hardwood Refinishing</a></li>
+            <li><a href="#services">Tile &amp; Grout Cleaning</a></li>
+            <li><a href="#services">Travertine Polishing</a></li>
+            <li><a href="#services">Stone Sealing</a></li>
+            <li><a href="#services">Concrete Coating</a></li>
+            <li><a href="#services">Upholstery Cleaning</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links">
+            <li><a href="sms:+18328122599">(832) 812-2599</a></li>
+            <li><a href="mailto:info@restorehoustontx.com">info@restorehoustontx.com</a></li>
+            <li>Greater Houston, TX</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Restore Houston LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/18328122599?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20one%20of%20your%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="white"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.77L0 32l8.43-2.007A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.853l-.485-.29-5.006 1.192 1.234-4.87-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.87c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.2-.266.398-1.03 1.295-1.263 1.562-.232.266-.465.299-.863.1-.398-.2-1.681-.619-3.203-1.976-1.184-1.056-1.983-2.36-2.215-2.758-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.697.2-.233.266-.399.399-.665.133-.266.066-.498-.033-.697-.1-.2-.897-2.162-1.229-2.96-.324-.777-.653-.672-.897-.684l-.764-.013c-.266 0-.697.1-1.063.498-.365.398-1.394 1.362-1.394 3.322s1.427 3.854 1.626 4.12c.2.266 2.808 4.287 6.803 6.014.951.41 1.693.655 2.271.839.954.303 1.823.26 2.509.158.765-.114 2.354-.963 2.687-1.893.332-.93.332-1.727.232-1.893-.099-.166-.365-.265-.763-.464z"/></svg>
+  </a>
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ===== VIDEO LIGHTBOX ===== -->
+  <div id="videoLightbox" class="lightbox hidden">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <video id="lightboxVideo" controls autoplay playsInline></video>
+      <p id="videoLightboxCaption"></p>
+      <p class="lightbox-hint">Tap outside the video to close</p>
+    </div>
+  </div>
+
+  <script>
+// ===== DATA =====
+const IMG = "assets/images";
+const VID = "assets/videos";
+
+const heroSlides = [
+  `${IMG}/409a0f7cc_IMG_8755.webp`,
+  `${IMG}/9b3ca6fdc_IMG_8756.webp`,
+  `${IMG}/d6860bbd4_IMG_8757.webp`,
+  `${IMG}/9be75deff_IMG_8758.webp`,
+  `${IMG}/20f5ea42d_IMG_8759.webp`,
+  `${IMG}/c376e338f_IMG_8760.webp`,
+  `${IMG}/a793ce3fc_IMG_8761.webp`,
+  `${IMG}/6af28c8f6_IMG_8762.webp`,
+  `${IMG}/48dd63990_IMG_8763.webp`,
+  `${IMG}/876cc4935_IMG_8764.webp`,
+];
+
+const beforeAfter1 = [
+  { title: "Marble Floor Restoration in Progress", before: `${VID}/edb6c519b_IMG_2415.mp4`, after: `${VID}/1ac812c49_IMG_2480.mp4`, isVideo: true },
+  { title: "Pebble Shower Floor Deep Cleaned & Restored", before: `${VID}/shower-before.mp4`, after: `${VID}/shower-after.mp4`, isVideo: true },
+  { title: "Marble Vanity Restored to a Bright, Polished Finish", before: `${IMG}/3c1efe636_IMG_8675.webp`, after: `${IMG}/4ed44d42c_IMG_8677.webp` },
+  { title: "Marble Countertop Polished to a Mirror Finish", before: `${IMG}/677126728_IMG_8674.webp`, after: `${IMG}/3a81e63a1_IMG_8673.webp` },
+  { title: "Terrazzo Floors Restored to a Bright, Polished Finish", before: `${IMG}/b8995227e_IMG_8681.webp`, after: `${IMG}/d9d5aa041_IMG_8682.webp` },
+  { title: "Black Terrazzo Kitchen Floor Polished to a Mirror Finish", before: `${IMG}/3e3e761af_IMG_8684.webp`, after: `${IMG}/6fa5b698d_IMG_8685.webp` },
+  { title: "Black Terrazzo Hallway Restored & Polished", before: `${IMG}/f77dd4eec_IMG_8683.webp`, after: `${IMG}/15e8f7472_IMG_8686.webp` },
+  { title: "Commercial Tile Floor Deep Cleaned & Restored", before: `${IMG}/339da4878_IMG_8664.webp`, after: `${IMG}/9df2c0a5d_IMG_8665.webp` },
+  { title: "Kitchen Tile Floor Cleaned & Restored", before: `${IMG}/2dbbb73bd_IMG_8666.webp`, after: `${IMG}/71811c0b2_IMG_8667.webp` },
+  { title: "Garage Concrete Floor Polished & Sealed", before: `${IMG}/9e635d576_IMG_8668.webp`, after: `${IMG}/478e22862_IMG_8669.webp` },
+  { title: "Stamped Concrete Driveway Cleaned & Resealed", before: `${IMG}/f35f99b0c_IMG_8670.webp`, after: `${IMG}/75c938cd2_IMG_8671.webp` },
+];
+
+const beforeAfter2 = [
+  { title: "Travertine Entryway Polished to a Mirror Finish", before: `${IMG}/fb1db3268_IMG_8694.webp`, after: `${IMG}/46670737c_IMG_8696.webp` },
+  { title: "Shower Bench Stone Cleaned & Restored", before: `${IMG}/3105d6a9a_IMG_8697.webp`, after: `${IMG}/cb0c5608e_IMG_8698.webp` },
+  { title: "Marble Hex Bathroom Floor Deep Cleaned & Polished", before: `${IMG}/6508f0ed8_IMG_8700.webp`, after: `${IMG}/e8b225bff_IMG_8699.webp` },
+  { title: "Terrazzo Floor Restored to a High-Gloss Mirror Finish", before: `${IMG}/9cdb20ad0_IMG_8701.webp`, after: `${IMG}/036ad4e1d_IMG_8702.webp` },
+  { title: "Dark Marble Shower Floor Deep Cleaned & Polished", before: `${IMG}/50ed11ff2_IMG_8705.webp`, after: `${IMG}/8aa6b11e7_IMG_8706.webp` },
+  { title: "Marble Countertop Etch Marks Removed & Repolished", before: `${IMG}/2cd3c92e2_IMG_8707.webp`, after: `${IMG}/beddc8917_IMG_8708.webp` },
+  { title: "Large Format Marble Bathroom Floor Polished & Sealed", before: `${IMG}/97244bc73_IMG_8709.webp`, after: `${IMG}/4f2da72a3_IMG_8710.webp` },
+  { title: "Black Marble Vanity Scratches Removed & Polished to a Mirror Finish", before: `${IMG}/dab5cb88e_IMG_8711.webp`, after: `${IMG}/50b3b3109_IMG_8712.webp` },
+  { title: "Large Marble Kitchen Island Polished to a Showroom Finish", before: `${IMG}/4ffbec92c_IMG_8714.webp`, after: `${IMG}/34b02f6df_IMG_8713.webp` },
+  { title: "Granite Kitchen Countertop Deep Cleaned & Polished to a High Gloss", before: `${IMG}/f20562b73_IMG_8715.webp`, after: `${IMG}/adbe0d4e0_IMG_8720.webp` },
+  { title: "Stone Shower Deep Cleaned & Grout Restored", before: `${IMG}/2f896265a_IMG_8722.webp`, after: `${IMG}/82a69c6b8_IMG_8724.webp` },
+];
+
+const beforeAfter3 = [
+  { title: "Crayon Stains Lifted From Cushion Fabric", before: `${IMG}/93b8352df_IMG_8884.webp`, after: `${IMG}/dba932d62_IMG_8885.webp` },
+  { title: "Marker Stains Removed From Sofa Armrest", before: `${IMG}/04820e95e_IMG_8886.webp`, after: `${IMG}/a08e69fcf_IMG_8887.webp` },
+  { title: "Heavy Marker Scribbles Deep Cleaned From Cushion", before: `${IMG}/146d7514d_IMG_8888.webp`, after: `${IMG}/066c4be2f_IMG_8889.webp` },
+];
+
+const ourWorkProject = {
+  title: "Marble Master Bathroom Restoration",
+  before: [
+    `${IMG}/1b636d8ea_IMG_8654.webp`,
+    `${IMG}/9d038b44a_IMG_8653.webp`,
+    `${IMG}/d1b9bcbc2_IMG_8652.webp`,
+    `${IMG}/392d6df3d_IMG_8651.webp`,
+  ],
+  after: [
+    `${IMG}/6f577e4a4_IMG_8650.webp`,
+    `${IMG}/8a8131fd1_IMG_8649.webp`,
+    `${IMG}/dd5046de1_IMG_8648.webp`,
+    `${IMG}/8cf5cbad2_IMG_8647.webp`,
+    `${IMG}/491c8d85f_IMG_8726.webp`,
+    `${IMG}/b64511753_IMG_8725.webp`,
+  ],
+};
+
+const videos = [
+  { url: `${VID}/3fce2d792_IMG_6994.mp4`, caption: "Behind the Scenes — Restoration in Progress" },
+  { url: `${VID}/89d849b74_Videoleap-9C6C067E-7726-4991-B2AA-073D6560060C.mp4`, caption: "Professional Floor Restoration Process" },
+  { url: `${VID}/83ccc3ad0_Videoleap-79112330-198A-4E43-8249-81FABB9517D4.mp4`, caption: "Stone Polishing & Refinishing" },
+  { url: `${VID}/95de60969_IMG_2781.mp4`, caption: "Surface Deep Clean & Restoration" },
+  { url: `${VID}/901c79e0e_IMG_6981.mp4`, caption: "Expert Craftsmanship at Work" },
+  { url: `${VID}/IMG_3859.mp4`, caption: "Restoration Work in Action" },
+];
+
+const testimonials = [
+  { name: "Jennifer M.", neighborhood: "River Oaks", text: "Absolutely incredible work. My marble floors look better than when the house was built. Ronald and his team were professional, on time, and meticulous.", stars: 5 },
+  { name: "David R.", neighborhood: "Houston Heights", text: "Had severe etching on our travertine entryway. After restoration, it looks flawless. I couldn't believe the transformation. Highly recommend!", stars: 5 },
+  { name: "Sarah K.", neighborhood: "Memorial", text: "From the free estimate to the final result, the experience was seamless. Our tile floors are sparkling clean and the grout looks brand new.", stars: 5 },
+  { name: "Mark T.", neighborhood: "Tanglewood", text: "Professional, knowledgeable, and the results speak for themselves. Our concrete garage floor now looks like a showroom. Worth every penny.", stars: 5 },
+  { name: "Lisa C.", neighborhood: "Sugar Land", text: "Ronald took time to explain the entire process and delivered on every promise. Our hardwood floors are stunning. 10/10 would hire again.", stars: 5 },
+  { name: "Carlos V.", neighborhood: "Katy", text: "Same-week availability was a lifesaver before our home sale. The floors looked so good our realtor asked for their number. Absolute pros.", stars: 5 },
+];
+
+// ===== LAZY VIDEO LOADING =====
+// Autoplay .ba-card videos don't get a src until they're about to enter
+// the viewport, so the browser doesn't download every clip on page load.
+function initLazyVideos() {
+  const videos = document.querySelectorAll('video.lazy-video[data-src]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const video = entry.target;
+      video.src = video.dataset.src;
+      video.removeAttribute('data-src');
+      video.play().catch(() => {});
+      io.unobserve(video);
+    });
+  }, { rootMargin: '400px 0px' });
+  videos.forEach(v => io.observe(v));
+}
+function initSlideshow() {
+  const container = document.getElementById('heroSlideshow');
+  heroSlides.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Stone restoration';
+    if (i === 0) img.classList.add('active');
+    else img.loading = 'lazy';
+    container.appendChild(img);
+  });
+  let current = 0;
+  const imgs = container.querySelectorAll('img');
+  setInterval(() => {
+    imgs[current].classList.remove('active');
+    current = (current + 1) % imgs.length;
+    imgs[current].classList.add('active');
+  }, 4000);
+}
+
+// ===== LIVE PHOTO HELPER =====
+// If a `live` video path is provided, renders a static image that plays a muted
+// looping video on hover (desktop) or press-and-hold (mobile) — like Apple Live Photos.
+function mediaHTML(src, label, live) {
+  if (live) {
+    return `
+      <div class="live-photo">
+        <img src="${src}" alt="${label}" data-src="${src}" data-label="${label}" class="ba-zoom" loading="lazy">
+        <video src="${live}" muted loop playsinline preload="metadata"></video>
+        <span class="live-badge">LIVE</span>
+      </div>`;
+  }
+  return `<img src="${src}" alt="${label}" data-src="${src}" data-label="${label}" class="ba-zoom" loading="lazy">`;
+}
+
+function initLivePhotos() {
+  document.querySelectorAll('.live-photo').forEach(el => {
+    if (el.dataset.liveBound) return;
+    el.dataset.liveBound = 'true';
+    const video = el.querySelector('video');
+    if (!video) return;
+    const play = () => { el.classList.add('playing'); video.currentTime = 0; video.play().catch(() => {}); };
+    const stop = () => { el.classList.remove('playing'); video.pause(); };
+    el.addEventListener('mouseenter', play);
+    el.addEventListener('mouseleave', stop);
+    el.addEventListener('touchstart', play, { passive: true });
+    el.addEventListener('touchend', stop);
+    el.addEventListener('touchcancel', stop);
+  });
+}
+
+// ===== BEFORE/AFTER 1 =====
+function renderBeforeAfter1() {
+  const grid = document.getElementById('ba1Grid');
+  beforeAfter1.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'ba-card reveal';
+    const beforeMedia = item.isVideo
+      ? `<video data-src="${item.before}" muted loop playsinline preload="none" class="lazy-video"></video>`
+      : mediaHTML(item.before, "Before", item.beforeLive);
+    const afterMedia = item.isVideo
+      ? `<video data-src="${item.after}" muted loop playsinline preload="none" class="lazy-video"></video>`
+      : mediaHTML(item.after, "After", item.afterLive);
+    card.innerHTML = `
+      <div class="ba-card-media">
+        <div class="ba-side">${beforeMedia}<span class="ba-label-before">Before</span></div>
+        <div class="ba-side">${afterMedia}<span class="ba-label-after">After</span></div>
+      </div>
+      <div class="ba-card-title"><p>${item.title}</p></div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===== BEFORE/AFTER 2 =====
+function renderBeforeAfter2() {
+  const grid = document.getElementById('ba2Grid');
+  beforeAfter2.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'ba-card reveal';
+    card.innerHTML = `
+      <div class="ba-card-media ba-tall">
+        <div class="ba-side">${mediaHTML(item.before, "Before", item.beforeLive)}<span class="ba-label-before">Before</span></div>
+        <div class="ba-side">${mediaHTML(item.after, "After", item.afterLive)}<span class="ba-label-after">After</span></div>
+      </div>
+      <div class="ba-card-title"><p>${item.title}</p></div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===== BEFORE/AFTER 3: UPHOLSTERY =====
+function renderBeforeAfter3() {
+  const grid = document.getElementById('ba3Grid');
+  beforeAfter3.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'ba-card reveal';
+    card.innerHTML = `
+      <div class="ba-card-media ba-tall">
+        <div class="ba-side">${mediaHTML(item.before, "Before", item.beforeLive)}<span class="ba-label-before">Before</span></div>
+        <div class="ba-side">${mediaHTML(item.after, "After", item.afterLive)}<span class="ba-label-after">After</span></div>
+      </div>
+      <div class="ba-card-title"><p>${item.title}</p></div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===== OUR WORK: BEFORE/AFTER FLIP GALLERY =====
+function renderOurWork() {
+  const wrap = document.getElementById('ourWorkFlip');
+  const state = { mode: 'before', index: 0 };
+
+  wrap.innerHTML = `
+    <div class="ow-flip-toggle">
+      <button type="button" data-mode="before" class="active">Before</button>
+      <button type="button" data-mode="after">After</button>
+    </div>
+    <div class="ow-flip-stage">
+      <button type="button" class="ow-flip-arrow prev" aria-label="Previous photo">&#8249;</button>
+      <img id="owFlipImg" src="" alt="${ourWorkProject.title}">
+      <button type="button" class="ow-flip-arrow next" aria-label="Next photo">&#8250;</button>
+      <span class="ow-flip-label" id="owFlipLabel">Before</span>
+      <span class="ow-flip-count" id="owFlipCount"></span>
+    </div>
+    <div class="ow-flip-dots" id="owFlipDots"></div>
+    <div class="ow-flip-title"><p>${ourWorkProject.title}</p></div>
+  `;
+
+  const img = wrap.querySelector('#owFlipImg');
+  const label = wrap.querySelector('#owFlipLabel');
+  const count = wrap.querySelector('#owFlipCount');
+  const dotsEl = wrap.querySelector('#owFlipDots');
+  const toggleBtns = wrap.querySelectorAll('.ow-flip-toggle button');
+
+  function update() {
+    const list = ourWorkProject[state.mode];
+    img.src = list[state.index];
+    img.alt = `${ourWorkProject.title} — ${state.mode} photo ${state.index + 1}`;
+    label.textContent = state.mode === 'before' ? 'Before' : 'After';
+    label.classList.toggle('is-before', state.mode === 'before');
+    count.textContent = `${state.index + 1} / ${list.length}`;
+    dotsEl.innerHTML = list.map((_, i) => `<span class="${i === state.index ? 'active' : ''}" data-i="${i}"></span>`).join('');
+    dotsEl.querySelectorAll('span').forEach(dot => {
+      dot.addEventListener('click', () => { state.index = parseInt(dot.dataset.i, 10); update(); });
+    });
+    toggleBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.mode === state.mode));
+  }
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => { state.mode = btn.dataset.mode; state.index = 0; update(); });
+  });
+  wrap.querySelector('.ow-flip-arrow.prev').addEventListener('click', () => {
+    const list = ourWorkProject[state.mode];
+    state.index = (state.index - 1 + list.length) % list.length;
+    update();
+  });
+  wrap.querySelector('.ow-flip-arrow.next').addEventListener('click', () => {
+    const list = ourWorkProject[state.mode];
+    state.index = (state.index + 1) % list.length;
+    update();
+  });
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+
+  update();
+}
+
+// ===== VIDEOS =====
+function renderVideos() {
+  const grid = document.getElementById('videoGrid');
+  videos.forEach(video => {
+    const item = document.createElement('div');
+    item.className = 'video-item';
+    item.innerHTML = `
+      <video src="${video.url}#t=0.5" muted playsinline preload="metadata"></video>
+      <div class="video-play"><div class="video-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+      <div class="video-caption"><p>${video.caption}</p></div>
+    `;
+    item.addEventListener('click', () => openVideoLightbox(video.url, video.caption));
+    grid.appendChild(item);
+  });
+}
+
+// ===== TESTIMONIALS =====
+function renderTestimonials() {
+  const grid = document.getElementById('testimonialGrid');
+  testimonials.forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card reveal';
+    card.innerHTML = `
+      <div class="testimonial-stars"></div>
+      <p class="testimonial-text">"${r.text}"</p>
+      <p class="testimonial-name">${r.name}</p>
+      <p class="testimonial-neighborhood">${r.neighborhood}</p>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===== LIGHTBOX =====
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption || '';
+  lb.classList.remove('hidden');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+}
+function openVideoLightbox(src, caption) {
+  const lb = document.getElementById('videoLightbox');
+  document.getElementById('lightboxVideo').src = src;
+  document.getElementById('videoLightboxCaption').textContent = caption || '';
+  lb.classList.remove('hidden');
+}
+function closeVideoLightbox() {
+  const lb = document.getElementById('videoLightbox');
+  const vid = document.getElementById('lightboxVideo');
+  vid.pause();
+  vid.src = '';
+  lb.classList.add('hidden');
+}
+
+// ===== MOBILE MENU =====
+function initMobileMenu() {
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  const closeIcon = document.getElementById('closeIcon');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+}
+
+// ===== CONTACT FORM =====
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      } else {
+        alert('Something went wrong. Please call us at (832) 812-2599.');
+        btn.textContent = 'Send My Request';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      alert('Something went wrong. Please call us at (832) 812-2599.');
+      btn.textContent = 'Send My Request';
+      btn.disabled = false;
+    }
+  });
+}
+
+// ===== IMAGE ZOOM (Before/After) =====
+function initImageZoom() {
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.ba-zoom');
+    if (img) {
+      openLightbox(img.dataset.src, img.dataset.label);
+    }
+  });
+}
+
+// ===== REVEAL ON SCROLL =====
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ===== LIGHTBOX EVENT LISTENERS =====
+function initLightboxEvents() {
+  const imgLb = document.getElementById('lightbox');
+  const vidLb = document.getElementById('videoLightbox');
+  imgLb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  vidLb.querySelector('.lightbox-close').addEventListener('click', closeVideoLightbox);
+  imgLb.addEventListener('click', (e) => { if (e.target === imgLb) closeLightbox(); });
+  vidLb.addEventListener('click', (e) => { if (e.target === vidLb) closeVideoLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeLightbox(); closeVideoLightbox(); }
+  });
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  initSlideshow();
+  renderBeforeAfter1();
+  initLazyVideos();
+  renderBeforeAfter2();
+  renderBeforeAfter3();
+  renderOurWork();
+  renderVideos();
+  renderTestimonials();
+  initLivePhotos();
+  initMobileMenu();
+  initContactForm();
+  initImageZoom();
+  initLightboxEvents();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+  </script>
+</body>
+</html>
